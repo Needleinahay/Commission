@@ -1,0 +1,15 @@
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\NLog.config
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\Data_layer.dll.config
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\Data_layer.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\Data_layer.pdb
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\EntityFramework.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\Models.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\NLog.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\Models.pdb
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\EntityFramework.xml
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\bin\Debug\NLog.xml
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\obj\Debug\Data_layer.csprojResolveAssemblyReference.cache
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\obj\Debug\Data_layer.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Data_layer\obj\Debug\Data_layer.pdb

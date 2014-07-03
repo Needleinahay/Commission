@@ -1,0 +1,13 @@
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\NLog.config
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\Models.dll.config
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\Models.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\Models.pdb
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\EntityFramework.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\NLog.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\EntityFramework.xml
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\bin\Debug\NLog.xml
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\obj\Debug\Models.dll
+E:\Архив\Игорь\Учеба\Epam\Commission\Models\obj\Debug\Models.pdb
