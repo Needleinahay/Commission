@@ -11,12 +11,12 @@ namespace Commission.Controllers
         public ActionResult Index()
         {
 
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
+            ViewBag.WelcomeMessage = "Welcome to our college!";
+            ViewBag.Slogan = "We'll teach you how to do it!";
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Faculties()
         {
             ViewBag.Message = "Your app description page.";
 

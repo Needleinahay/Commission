@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>College - @ViewBag.Title</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
@@ -10,9 +10,9 @@
     </head>
     <body>
         <header>
-            <div class="content-wrapper">
+            <div class="content-wrapper header-color">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title" id="title">@Html.ActionLink("College", "Index", "Home")</p><span class="slogan">We'll teach you how to do it!</span>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -20,26 +20,23 @@
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Faculties", "Faculties", "Home")</li>
+                            <li>@Html.ActionLink("Contacts", "Contact", "Home")</li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
+        <nav>
+
+        </nav>
         <div id="body">
-            @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
         </div>
         <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
+            <p>&copy; @DateTime.Now.Year - All rights seem to be reserved...</p>
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
