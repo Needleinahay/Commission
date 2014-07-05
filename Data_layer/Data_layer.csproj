@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommisionExceptionsList.cs" />
+    <Compile Include="ExceptionsList.cs" />
     <Compile Include="CommissionContext.cs" />
     <Compile Include="Initialiser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

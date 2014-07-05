@@ -19,21 +19,37 @@ namespace Data_layer
 
         public IEnumerable<Faculty> GetFaculties()
         {
-            try  { return context.Faculties; }
-            catch
+            try
             {
-                logger.Error("Could not pull faculties' list from DB.");
+                IEnumerable<Faculty> toReturn = context.Faculties;
+                if (toReturn != null)
+                    return toReturn;
+                else
+                    throw new NullEntryFromDb("The Faculty model pulled from database is null");
+            }
+            catch (NullEntryFromDb ex)
+            {
+                logger.Error(ex.Message);
                 return null;
             }
         }
         public ContactInfo GetContactInfo()
         {
-            try { return context.ContactInf.FirstOrDefault(); }
-            catch
+            try
             {
-                logger.Error("Could not pull Contact information from DB.");
+                ContactInfo toReturn = context.ContactInf.FirstOrDefault();
+                if (toReturn != null)
+                    return toReturn;
+                else
+                    throw new NullEntryFromDb("The ContactInfo model pulled from database is null");
+            }
+            catch (NullEntryFromDb ex)
+            {
+                logger.Error(ex.Message);
                 return null;
             }
+
+
         }
     }
 }

@@ -7,7 +7,7 @@ body {
     background-color: #EEEEEE;
     border-top: solid 10px #000;
     font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-family: 'Comic Sans MS', Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
 }
@@ -590,6 +590,24 @@ tr.pager td {
     padding: 0 0.25em 0 0;
 }
 
+/* tables sorted
+----------------------------------------------------------*/
+
+table.tablesorter th a{
+    font-family: 'Comic Sans MS', Verdana;
+    font-size: 110%;
+    color: #410707;
+}
+
+table.tablesorter th a:hover{
+    color: #813939;
+}
+
+table.tablesorter td{
+    font-family: 'Comic Sans MS', Verdana;
+}
+
+table td { width:230px;}
 
 /********************
 *   Mobile Styles   *

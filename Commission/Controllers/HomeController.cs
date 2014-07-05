@@ -25,16 +25,76 @@ namespace Commission.Controllers
             return View();
         }
 
-        public ActionResult Faculties()
+        public ActionResult Faculties(string sortBy)
         {
             logger.Info("Getting Faculties' list...");
-            return View(data.GetFaculties());
+
+            ViewBag.NameSort = String.IsNullOrEmpty(sortBy) ? "NameMax" : "";
+            ViewBag.VacancySort = sortBy == "VacancyMin" ? "VacancyMax" : "VacancyMin";
+            ViewBag.VacancyScholarshipSort = sortBy == "VacancyScholarshipMin" ? "VacancyScholarshipMax" : "VacancyScholarshipMin";
+            var toView = data.GetFaculties();
+            if (toView != null)
+            {
+                switch (sortBy)
+                {
+                    case "NameMax":
+                        {
+                            toView = toView.OrderByDescending(x => x.Name);
+                            break;
+                        }
+                    case "Name":
+                        {
+                            toView = toView.OrderBy(x => x.Name);
+                            break;
+                        }
+                    case "VacancyMax":
+                        {
+                            toView = toView.OrderByDescending(x => x.Vacancies);
+                            break;
+                        }
+                    case "VacancyMin":
+                        {
+                            toView = toView.OrderBy(x => x.Vacancies);
+                            break;
+                        }
+                    case "VacancyScholarshipMax":
+                        {
+                            toView = toView.OrderByDescending(x => x.ScholarshipVacancies);
+                            break;
+                        }
+                    case "VacancyScholarshipMin":
+                        {
+                            toView = toView.OrderBy(x => x.ScholarshipVacancies);
+                            break;
+                        }
+                    default:
+                        {
+                            toView = toView.OrderBy(x => x.Name);
+                            break;
+                        }
+                }
+                return View(toView);
+            }
+            else
+                return RedirectToAction("WrongPage");
         }
 
         public ActionResult Contact()
         {
-            logger.Info("Getting Contact informatio...");
-            return View(data.GetContactInfo());
+            logger.Info("Getting Contact information...");
+            var toView = data.GetContactInfo();
+            if (toView != null)
+                return View(toView);
+            else
+                return RedirectToAction("WrongPage");
+        }
+
+
+
+        // if null object is retrieved from db
+        public ActionResult WrongPage()
+        {
+            return View();
         }
     }
 }

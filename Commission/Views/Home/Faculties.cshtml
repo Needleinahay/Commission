@@ -5,12 +5,30 @@
     ViewBag.Title = "Faculties";
 }
 
-@foreach (Faculty f in Model)
-{
-    <h3>@f.Name</h3>
-    <div>
-        @if (f.Details.Length <= 200) {@f.Details} else {@f.Details.Substring(0,200)}
+<div>
+    <table class="tablesorter">
+        <thead>
+            <tr>
+                <th>@Html.ActionLink("Name of Faculty", "Faculties", new {sortBy = ViewBag.NameSort})</th>
+                <th>@Html.ActionLink("Vacancies", "Faculties", new { sortBy = ViewBag.VacancySort })</th>
+                <th>@Html.ActionLink("Vacancies with scholarship", "Faculties", new { sortBy = ViewBag.VacancyScholarshipSort })</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (Faculty f in Model)
+                {     
+                    <tr>
+                        <td>@f.Name</td>
+                        <td>@f.Vacancies</td>
+                        <td>@f.ScholarshipVacancies</td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+    <div id="pager">
+
     </div>
-    
-    <br>
-}
+</div>
+
+
+
