@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Data_layer;
+using NLog;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -14,13 +17,13 @@ namespace Commission
 
     public class MvcApplication : System.Web.HttpApplication
     {
-        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static Logger logger = LogManager.GetCurrentClassLogger();
 
         protected void Application_Start()
         {
-            logger.Info("Application start");
+            logger.Info("Application start...");
             AreaRegistration.RegisterAllAreas();
-
+            Database.SetInitializer(new Initialiser());
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
