@@ -386,15 +386,15 @@ aside {
 }
 
 /* contact */
-.contact h3 {
+.listInf h3 {
     font-size: 1.2em;
 }
 
-.contact p {
+.listInf p {
     margin: 5px 0 0 10px;
 }
 
-.contact iframe {
+.listInf iframe {
     border: 1px solid #333;
     margin: 5px 0 0 10px;
 }
@@ -457,14 +457,23 @@ textarea {
     input[type="submit"],
     input[type="button"],
     button {
-        background-color: #d3dce0;
-        border: 1px solid #787878;
+        background-color: #4C0B0B;
+        color: #E6C2C2;
         cursor: pointer;
         font-size: 1.2em;
         font-weight: 600;
         padding: 7px;
         margin-right: 8px;
         width: auto;
+    }
+
+    input[type="button"]:hover{
+        background-color: #813939;
+        color: #F2DCDC;
+    }
+    input[type="submit"]:hover{
+        background-color: #813939;
+        color: #F2DCDC;
     }
 
     td input[type="submit"],

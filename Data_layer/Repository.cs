@@ -33,6 +33,24 @@ namespace Data_layer
                 return null;
             }
         }
+
+        public Faculty GetFaculty(int id)
+        {
+            try
+            {
+                Faculty toReturn = context.Faculties.Find(id);
+                if (toReturn != null)
+                    return toReturn;
+                else
+                    throw new NullEntryFromDb("The Faculty pulled from database is null");
+            }
+            catch (NullEntryFromDb ex)
+            {
+                logger.Error(ex.Message);
+                return null;
+            }
+        } 
+
         public ContactInfo GetContactInfo()
         {
             try

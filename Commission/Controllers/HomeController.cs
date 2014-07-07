@@ -21,6 +21,7 @@ namespace Commission.Controllers
         public ActionResult Index()
         {
             logger.Info("Getting Home page...");
+
             ViewBag.WelcomeMessage = "Welcome to our college!";
             return View();
         }
@@ -79,9 +80,21 @@ namespace Commission.Controllers
                 return RedirectToAction("WrongPage");
         }
 
+        public ActionResult Faculty(int id)
+        {
+            logger.Info("Getting particular faculty...");
+
+            var toView = data.GetFaculty(id);
+            if (toView != null)
+                return View(toView);
+            else
+                return RedirectToAction("Wrong page");
+        }
+
         public ActionResult Contact()
         {
             logger.Info("Getting Contact information...");
+
             var toView = data.GetContactInfo();
             if (toView != null)
                 return View(toView);

@@ -18,9 +18,9 @@
                 @foreach (Faculty f in Model)
                 {     
                     <tr>
-                        <td>@f.Name</td>
-                        <td>@f.Vacancies</td>
-                        <td>@f.ScholarshipVacancies</td>
+                        <td>@Html.ActionLink(f.Name, "Faculty", new {id = f.FacultyId})</td>
+                        <td>@Html.ActionLink(f.Vacancies.ToString(), "Faculty", new { id = f.FacultyId })</td>
+                        <td>@Html.ActionLink(f.ScholarshipVacancies.ToString(), "Faculty", new { id = f.FacultyId })</td>
                     </tr>
                 }
         </tbody>

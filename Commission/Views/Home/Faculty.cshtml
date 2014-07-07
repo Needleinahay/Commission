@@ -1,0 +1,36 @@
+﻿@model Models.Faculty
+
+@{
+    ViewBag.Title = "Faculty";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<section class="listInf">
+    <header>
+        <h3>Details:</h3>
+    </header>
+    <p>
+        <span>@Html.DisplayFor(model => model.Details)</span>
+    </p>
+</section>
+
+<section class="listInf">
+    <header>
+        <h3>Vacancies:</h3>
+    </header>
+    <p>
+        <span>@Html.DisplayFor(model => model.Vacancies)</span>
+    </p>
+</section>
+
+<section class="listInf">
+    <header>
+        <h3>Scholarship Vacancies:</h3>
+    </header>
+    <p>
+        @Html.DisplayFor(model => model.ScholarshipVacancies)
+    </p>
+</section>
+<br />
+<input type="button" value="Apply" />
