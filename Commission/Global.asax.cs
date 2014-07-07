@@ -23,12 +23,13 @@ namespace Commission
         {
             logger.Info("Application start...");
             AreaRegistration.RegisterAllAreas();
-            Database.SetInitializer(new Initialiser());
+            
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+            Database.SetInitializer(new Initialiser());
         }
     }
 }
