@@ -11,7 +11,7 @@ namespace Commission.Models
     public class UsersContext : DbContext
     {
         public UsersContext()
-            : base("DefaultConnection")
+            : base("CommissionContext")
         {
         }
 
