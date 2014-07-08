@@ -25,6 +25,13 @@ namespace Commission.Models
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
         public string UserName { get; set; }
+
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string City { get; set; }
+        public string Region { get; set; }
+        public string School { get; set; }
+
     }
 
     public class RegisterExternalLoginModel
@@ -75,6 +82,23 @@ namespace Commission.Models
         [Required]
         [Display(Name = "User name")]
         public string UserName { get; set; }
+
+        [Required]
+        [Display(Name = "Full name")]
+        public string FullName { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        public string City { get; set; }
+
+        [Required]
+        public string Region { get; set; }
+
+        [Required]
+        public string School { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
